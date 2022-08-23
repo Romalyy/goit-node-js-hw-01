@@ -1,7 +1,6 @@
 const fs = require("fs/promises");
 const path = require("path");
-// const { nanoid } = require("nanoid");
-// import { nanoid } from 'nanoid';
+
 const shortid = require("shortid");
 
 const contactsPath = path.join(__dirname, "db/contacts.json")
@@ -47,19 +46,3 @@ module.exports = {
     addContact,
     removeContact,
 }
-
-// const fs = require("fs/promises");
-// const path = require("path");
-
-// const file = async ({ filepath, action }) => {
-//     switch (action) {
-//         case "read":
-//             const text = await fs.readFile(filepath, "utf-8");
-//             console.log(text);
-//             break;
-//     }
-// }
-
-// const filepath = "./db/file.txt";
-
-// file({ filepath, action: "read" });

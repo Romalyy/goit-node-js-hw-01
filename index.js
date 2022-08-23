@@ -1,11 +1,7 @@
-// console.log("Hallo, dear friend");
-// const yargs = require("yargs");
-// const { hideBin } = require("yargs/helpers");
 const { Command } = require("commander");
 const program = new Command();
 
 const contacts = require("./contacts");
-
 
 const invokeAction = async({ action, id, name, email, phone }) => {
     switch (action) {
@@ -39,11 +35,3 @@ program.parse(process.argv);
 
 const argv = program.opts();
 invokeAction(argv);
-// const arr = hideBin(process.argv)
-// const { argv } = yargs(arr);
-// invokeAction(argv);
-
-// invokeAction({ action: "listContacts" });
-// invokeAction({ action: "getContactById", id: "5" });
-// invokeAction({ action: "addContact", name: "5", phone: "5", email: "5" });
-// invokeAction({ action: "removeContact", id: "WJB-akbn2" });
